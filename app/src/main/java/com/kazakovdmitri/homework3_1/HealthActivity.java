@@ -26,9 +26,8 @@ public class HealthActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String weightS = weightT.getText().toString();
                 String stepsS = stepsT.getText().toString();
-                if (weightS.equals("")||stepsS.equals("")) {
-                    Toast toast = Toast.makeText(getApplicationContext(), R.string.msg_empty, Toast.LENGTH_SHORT);
-                    toast.show();
+                if (weightS.isEmpty()||stepsS.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), R.string.msg_empty, Toast.LENGTH_SHORT).show();
                 } else {
                     try {
                         double weight = Double.parseDouble(weightS);
@@ -36,11 +35,9 @@ public class HealthActivity extends AppCompatActivity {
                         Health health = new Health(weight, steps);
                         healthArray.add(health);
                     } catch (Exception e) {
-                        Toast toast = Toast.makeText(getApplicationContext(), R.string.msg_error, Toast.LENGTH_SHORT);
-                        toast.show();
+                        Toast.makeText(getApplicationContext(), R.string.msg_error, Toast.LENGTH_SHORT).show();
                     }
-                    Toast toast = Toast.makeText(getApplicationContext(), R.string.msg_save, Toast.LENGTH_SHORT);
-                    toast.show();
+                    Toast.makeText(getApplicationContext(), R.string.msg_save, Toast.LENGTH_SHORT).show();
                 }
                 Log.i(TAG, "Нажата кнопка Сохранить");
             }

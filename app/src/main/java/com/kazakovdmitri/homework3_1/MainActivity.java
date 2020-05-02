@@ -51,19 +51,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String name = nameT.getText().toString().trim();
                 String ageS = ageT.getText().toString().trim();
-                if (name.equals("")||ageT.equals("")) {
-                    Toast toast = Toast.makeText(getApplicationContext(), R.string.msg_empty, Toast.LENGTH_SHORT);
-                    toast.show();
+                if (name.isEmpty()||ageS.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), R.string.msg_empty, Toast.LENGTH_SHORT).show();
                 } else {
                     try {
                         int age = Integer.parseInt(ageS);
                         Patient patient = new Patient(name, age);
                     } catch (Exception e) {
-                        Toast toast = Toast.makeText(getApplicationContext(), R.string.error_age, Toast.LENGTH_SHORT);
-                        toast.show();
+                        Toast.makeText(getApplicationContext(), R.string.error_age, Toast.LENGTH_SHORT).show();
                     }
-                    Toast toast = Toast.makeText(getApplicationContext(), R.string.msg_save, Toast.LENGTH_SHORT);
-                    toast.show();
+                    Toast.makeText(getApplicationContext(), R.string.msg_save, Toast.LENGTH_SHORT).show();
                 }
                 Log.i(TAG, "Нажата кнопка Сохранить");
             }

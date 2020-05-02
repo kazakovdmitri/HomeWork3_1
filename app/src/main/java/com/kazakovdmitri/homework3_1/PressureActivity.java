@@ -87,9 +87,8 @@ public class PressureActivity extends AppCompatActivity {
                 } else {
                     tachikardyaS = String.valueOf(R.string.switchNo);
                 }
-                if (upPressureS.equals("")||downPressureS.equals("")||pulseS.equals("")||dateS.equals("")) {
-                    Toast toast = Toast.makeText(getApplicationContext(), R.string.msg_empty, Toast.LENGTH_SHORT);
-                    toast.show();
+                if (upPressureS.isEmpty()||downPressureS.isEmpty()||pulseS.isEmpty()||dateS.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), R.string.msg_empty, Toast.LENGTH_SHORT).show();
                 } else {
                     try {
                         int upPressure = Integer.parseInt(upPressureS);
@@ -99,11 +98,9 @@ public class PressureActivity extends AppCompatActivity {
                         Pressure pressure = new Pressure(upPressure, downPressure, pulse, tachikardyaS1, dateS);
                         pressureArray.add(pressure);
                     } catch (Exception e) {
-                        Toast toast = Toast.makeText(getApplicationContext(), R.string.msg_error, Toast.LENGTH_SHORT);
-                        toast.show();
+                        Toast.makeText(getApplicationContext(), R.string.msg_error, Toast.LENGTH_SHORT).show();
                     }
-                    Toast toast = Toast.makeText(getApplicationContext(), R.string.msg_save, Toast.LENGTH_SHORT);
-                    toast.show();
+                    Toast.makeText(getApplicationContext(), R.string.msg_save, Toast.LENGTH_SHORT).show();
                 }
                 Log.i(TAG, "Нажата кнопка Сохранить");
             }
