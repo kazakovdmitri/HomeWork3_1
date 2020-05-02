@@ -97,6 +97,7 @@ public class PressureActivity extends AppCompatActivity {
                         int pulse = Integer.parseInt(pulseS);
                         String tachikardyaS1 = tachikardyaS;
                         Pressure pressure = new Pressure(upPressure, downPressure, pulse, tachikardyaS1, dateS);
+                        pressureArray.add(pressure);
                     } catch (Exception e) {
                         Toast toast = Toast.makeText(getApplicationContext(), R.string.msg_error, Toast.LENGTH_SHORT);
                         toast.show();

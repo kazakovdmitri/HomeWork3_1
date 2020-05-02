@@ -17,7 +17,7 @@ public class HealthActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_health);
-        final ArrayList<Health> health = new ArrayList<>();
+        final ArrayList<Health> healthArray = new ArrayList<>();
         Button btnSave = findViewById(R.id.buttonSave);
         final EditText weightT = findViewById(R.id.editWeight);
         final EditText stepsT = findViewById(R.id.editSteps);
@@ -33,8 +33,8 @@ public class HealthActivity extends AppCompatActivity {
                     try {
                         double weight = Double.parseDouble(weightS);
                         int steps = Integer.parseInt(stepsS);
-                        Health health1 = new Health(weight, steps);
-                        health.add(health1);
+                        Health health = new Health(weight, steps);
+                        healthArray.add(health);
                     } catch (Exception e) {
                         Toast toast = Toast.makeText(getApplicationContext(), R.string.msg_error, Toast.LENGTH_SHORT);
                         toast.show();
