@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Cистема мониторинга здоровья</string>
+    <string name="main_text">Комплексная система мониторинга здоровья. Казаков Дмитрий</string>
+    <string name="info_patient">Информация о пациенте</string>
+    <string name="save_btn">Сохранить</string>
+    <string name="pressure_btn">Показатели давления</string>
+    <string name="health_btn">Показатели здоровья</string>
+    <string name="fio_patient">ФИО пациента</string>
+    <string name="age_patient">Возраст пациента</string>
+    <string name="main_pressuretext">Показатели давления</string>
+    <string name="up_pressure">Верхнее давление</string>
+    <string name="down_pressure">Нижнее давление</string>
+    <string name="pulse">Пульс</string>
+    <string name="tachycardia">Тахикардия</string>
+    <string name="switchYes">Да</string>
+    <string name="switchNo">Нет</string>
+    <string name="date_pressure">Дата замера</string>
+    <string name="main_healthtext">Показатели здоровья</string>
+    <string name="weight">Вес пациента</string>
+    <string name="count_steps">Количество шагов за день</string>
+    <string name="error_name">Имя не может быть пустым!</string>
+    <string name="error_age">Возраст указан не верно!</string>
+    <string name="msg_save">Информация сохранена</string>
+    <string name="msg_error">Данные не верны</string>
+    <string name="msg_empty">Не все данные заполнены!</string>
+</resources>
