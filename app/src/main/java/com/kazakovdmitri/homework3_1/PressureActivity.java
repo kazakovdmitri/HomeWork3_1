@@ -104,8 +104,8 @@ public class PressureActivity extends AppCompatActivity {
                     }
                     Toast toast = Toast.makeText(getApplicationContext(), R.string.msg_save, Toast.LENGTH_SHORT);
                     toast.show();
-                    Log.i(TAG, "Нажата кнопка Сохранить");
                 }
+                Log.i(TAG, "Нажата кнопка Сохранить");
             }
         });
     }

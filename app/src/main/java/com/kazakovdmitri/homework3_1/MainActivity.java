@@ -62,10 +62,10 @@ public class MainActivity extends AppCompatActivity {
                         Toast toast = Toast.makeText(getApplicationContext(), R.string.error_age, Toast.LENGTH_SHORT);
                         toast.show();
                     }
-                    Log.i(TAG, "Нажата кнопка Сохранить");
                     Toast toast = Toast.makeText(getApplicationContext(), R.string.msg_save, Toast.LENGTH_SHORT);
                     toast.show();
                 }
+                Log.i(TAG, "Нажата кнопка Сохранить");
             }
         });
 
